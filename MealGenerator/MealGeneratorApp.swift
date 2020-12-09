@@ -14,8 +14,6 @@ struct MealGeneratorApp: App {
     var body: some Scene {
         WindowGroup {
             
-            //ContentView()
-            
             TabView {
                 NavigationView {
                     ModesScreen()
@@ -28,6 +26,11 @@ struct MealGeneratorApp: App {
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
+                }
+                ContentView()
+                .tabItem {
+                    Image(systemName: "link")
+                    Text("MealApi")
                 }
             }
             .environment(\.colorScheme, isDarkMode ? .dark : .light)
